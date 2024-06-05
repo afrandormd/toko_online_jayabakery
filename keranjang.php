@@ -95,7 +95,7 @@ if (isset($_POST['submit1'])) {
 							Rp.<?= number_format($hasil); ?></td>
 					</tr>
 					<tr>
-						<td colspan="7" style="text-align: right; font-weight: bold;"><a href="index.php"
+						<td colspan="7" style="text-align: right; font-weight: bold;"><a href="produk.php"
 								class="btn btn-success">Lanjutkan Belanja</a> <a href="checkout.php?kode_cs=<?= $kode_cs; ?>"
 								class="btn btn-primary">Checkout</a></td>
 					</tr>

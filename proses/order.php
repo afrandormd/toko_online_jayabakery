@@ -1,4 +1,4 @@
-<?php 
+<?php
 include '../koneksi/koneksi.php';
 $kd_cs = $_POST['kode_cs'];
 $nama = $_POST['nama'];
@@ -13,20 +13,19 @@ $kode = mysqli_query($conn, "SELECT invoice from produksi order by invoice desc"
 $data = mysqli_fetch_assoc($kode);
 $num = substr($data['invoice'], 3, 4);
 $add = (int) $num + 1;
-if(strlen($add) == 1){
-	$format = "INV000".$add;
-}else if(strlen($add) == 2){
-	$format = "INV00".$add;
-}
-else if(strlen($add) == 3){
-	$format = "INV0".$add;
-}else{
-	$format = "INV".$add;
+if (strlen($add) == 1) {
+	$format = "INV000" . $add;
+} else if (strlen($add) == 2) {
+	$format = "INV00" . $add;
+} else if (strlen($add) == 3) {
+	$format = "INV0" . $add;
+} else {
+	$format = "INV" . $add;
 }
 
 $keranjang = mysqli_query($conn, "SELECT * FROM keranjang WHERE kode_customer = '$kd_cs'");
 
-while($row = mysqli_fetch_assoc($keranjang)){
+while ($row = mysqli_fetch_assoc($keranjang)) {
 	$kd_produk = $row['kode_produk'];
 	$nama_produk = $row['nama_produk'];
 	$qty = $row['qty'];
@@ -37,11 +36,12 @@ while($row = mysqli_fetch_assoc($keranjang)){
 
 
 }
-	$del_keranjang = mysqli_query($conn,"DELETE FROM keranjang WHERE kode_customer = '$kd_cs'");
+$del_keranjang = mysqli_query($conn, "DELETE FROM keranjang WHERE kode_customer = '$kd_cs'");
 
-	if($del_keranjang){
-		header("location:../selesai.php");
-	}
+if ($del_keranjang) {
+	header("location:../midtrans/examples/snap/checkout-process.php?kd_cs=$kd_cs");
+	// header("location:../selesai.php");
+}
 
 
 

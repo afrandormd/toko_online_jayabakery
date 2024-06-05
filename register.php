@@ -3,7 +3,7 @@ include 'layouts/header.php';
 ?>
 
 <div class="container" style="padding-bottom: 250px;">
-	<h2 style=" width: 100%; border-bottom: 4px solid #ff8680"><b>Register</b></h2>
+	<h2 style=" width: 100%; border-bottom: 4px solid #611319"><b>Register</b></h2>
 	<form action="proses/register.php" method="POST">
 		<div class="row">
 			<div class="col-md-6">
@@ -60,6 +60,7 @@ include 'layouts/header.php';
 		</div>
 
 		<button type="submit" class="btn btn-success">Register</button>
+		<a href="user_login.php" class="btn btn-primary">Login</a>
 	</form>
 </div>
 
