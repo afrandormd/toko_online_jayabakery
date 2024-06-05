@@ -6,7 +6,7 @@ $rows = mysqli_fetch_assoc($cs);
 ?>
 
 <div class="container" style="padding-bottom: 200px">
-	<h2 style=" width: 100%; border-bottom: 4px solid #ff8680"><b>Checkout</b></h2>
+	<h2 style=" width: 100%; border-bottom: 4px solid #611319"><b>Checkout</b></h2>
 	<div class="row">
 		<div class="col-md-6">
 			<h4>Daftar Pesanan</h4>
@@ -39,7 +39,8 @@ $rows = mysqli_fetch_assoc($cs);
 				?>
 				<tr>
 					<td colspan="5" style="text-align: right; font-weight: bold;">Grand Total =
-						<?= number_format($hasil); ?></td>
+						<?= number_format($hasil); ?>
+					</td>
 				</tr>
 			</table>
 		</div>
