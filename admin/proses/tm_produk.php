@@ -1,23 +1,22 @@
-<?php 
+<?php
 include '../../koneksi/koneksi.php';
 
-	// generate kode bom
+// generate kode bom
 $kode = mysqli_query($conn, "SELECT kode_bom from bom_produk order by kode_bom desc");
 $data = mysqli_fetch_assoc($kode);
-if($data['kode_bom'] == null){
+if ($data['kode_bom'] == null) {
 	$format = "B0001";
-}else{
+} else {
 	$num = substr($data['kode_bom'], 1, 4);
 	$add = (int) $num + 1;
-	if(strlen($add) == 1){
-		$format = "B000".$add;
-	}else if(strlen($add) == 2){
-		$format = "B00".$add;
-	}
-	else if(strlen($add) == 3){
-		$format = "B0".$add;
-	}else{
-		$format = "B".$add;
+	if (strlen($add) == 1) {
+		$format = "B000" . $add;
+	} else if (strlen($add) == 2) {
+		$format = "B00" . $add;
+	} else if (strlen($add) == 3) {
+		$format = "B0" . $add;
+	} else {
+		$format = "B" . $add;
 	}
 
 }
@@ -27,6 +26,7 @@ if($data['kode_bom'] == null){
 $kode = $_POST['kode'];
 $nm_produk = $_POST['nama'];
 $harga = $_POST['harga'];
+$stok = $_POST['stok'];
 $desk = $_POST['desk'];
 $nama_gambar = $_FILES['files']['name'];
 $size_gambar = $_FILES['files']['size'];
@@ -39,7 +39,7 @@ $kd_material = $_POST['material'];
 $keb = $_POST['keb'];
 
 
-if($eror === 4){
+if ($eror === 4) {
 	echo "
 	<script>
 	alert('TIDAK ADA GAMBAR YANG DIPILIH');
@@ -49,11 +49,11 @@ if($eror === 4){
 	die;
 }
 
-$ekstensiGambar = array('jpg','jpeg','png');
+$ekstensiGambar = array('jpg', 'jpeg', 'png');
 $ekstensiGambarValid = explode(".", $nama_gambar);
 $ekstensiGambarValid = strtolower(end($ekstensiGambarValid));
 
-if(!in_array($ekstensiGambarValid, $ekstensiGambar)){
+if (!in_array($ekstensiGambarValid, $ekstensiGambar)) {
 	echo "
 	<script>
 	alert('EKSTENSI GAMBAR HARUS JPG, JPEG, PNG');
@@ -63,7 +63,7 @@ if(!in_array($ekstensiGambarValid, $ekstensiGambar)){
 	die;
 }
 
-if($size_gambar > 1000000){
+if ($size_gambar > 1000000) {
 	echo "
 	<script>
 	alert('UKURAN GAMBAR TERLALU BESAR');
@@ -74,12 +74,12 @@ if($size_gambar > 1000000){
 }
 
 $namaGambarBaru = uniqid();
-$namaGambarBaru.=".";
-$namaGambarBaru.=$ekstensiGambarValid;
+$namaGambarBaru .= ".";
+$namaGambarBaru .= $ekstensiGambarValid;
 
-if (move_uploaded_file($tmp_file, "../../image/produk/".$namaGambarBaru)) {
+if (move_uploaded_file($tmp_file, "../../image/produk/" . $namaGambarBaru)) {
 
-	$result = mysqli_query($conn, "INSERT INTO produk VALUES('$kode','$nm_produk','$namaGambarBaru','$desk','$harga')");
+	$result = mysqli_query($conn, "INSERT INTO produk VALUES('$kode','$nm_produk','$namaGambarBaru','$desk','$harga','$stok')");
 
 	$filter = array_filter($kd_material);
 	$jml = count($filter) - 1;
@@ -90,7 +90,7 @@ if (move_uploaded_file($tmp_file, "../../image/produk/".$namaGambarBaru)) {
 		$no++;
 	}
 
-	if($result){
+	if ($result) {
 		echo "
 		<script>
 		alert('PRODUK BERHASIL DITAMBAHKAN');

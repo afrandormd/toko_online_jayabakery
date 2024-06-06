@@ -99,7 +99,7 @@ include 'layouts/header.php';
 			?>
 			<div class="col-sm-6 col-md-4">
 				<div class="thumbnail"
-					style="background-color: #fde3a0; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: none; border-radius: 10px;">
+					style="background-color: #ffe8ae; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: none; border-radius: 10px;">
 					<img src="image/produk/<?= $row['image']; ?>">
 					<div class="caption text-center">
 						<h3><b><?= $row['nama']; ?></b></h3>
@@ -138,9 +138,9 @@ include 'layouts/header.php';
 	</div>
 	<!-- testimoni section -->
 	<div class="container">
-		<h2 class="text-center"><b>Testimoni</b></h2>
+		<h2 class="text-center" style="color: #611319; border-bottom: 4px solid #611319;"><b>Testimoni</b></h2>
 		<div id="testimonialCarousel" class="carousel slide" data-ride="carousel"
-			style="background-color: #ffe28f; border-radius: 20px">
+			style="background-color: #ffe8ae; border-radius: 20px">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
 				<li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
@@ -152,7 +152,7 @@ include 'layouts/header.php';
 			<div class="carousel-inner">
 				<div class="item active">
 					<div class="testimonial-item"
-						style="background-color: #fde3a0; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+						style="background-color: #611319; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); color: white;">
 						<p>"Layanan yang luar biasa! Saya sangat puas dengan kualitas produk dan layanan yang
 							diberikan."</p>
 						<h4>- Afrando Sharein Ramadhan</h4>
@@ -161,7 +161,7 @@ include 'layouts/header.php';
 
 				<div class="item">
 					<div class="testimonial-item"
-						style="background-color: #fde3a0; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+						style="background-color: #611319; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); color: white;">
 						<p>"Pengalaman berbelanja yang sangat menyenangkan. Sangat direkomendasikan!"</p>
 						<h4>- Tias Haikal Mulyana</h4>
 					</div>
@@ -169,7 +169,7 @@ include 'layouts/header.php';
 
 				<div class="item">
 					<div class="testimonial-item"
-						style="background-color: #fde3a0; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+						style="background-color: #611319; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); color: white;">
 						<p>"Produk berkualitas tinggi dan layanan pelanggan yang sangat membantu."</p>
 						<h4>- Nurhidayat</h4>
 					</div>

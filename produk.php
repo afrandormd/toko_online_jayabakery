@@ -10,7 +10,7 @@ if (isset($_GET['search'])) {
 }
 
 // Konfigurasi pagination
-$results_per_page = 3;
+$results_per_page = 6;
 $sql_count = "SELECT COUNT(*) AS total FROM produk";
 if (!empty($search_keyword)) {
 	$sql_count .= " WHERE nama LIKE '%$search_keyword%'";

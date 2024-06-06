@@ -22,7 +22,9 @@ if (isset($_SESSION['kd_cs'])) {
 
 </head>
 
-<body style="background-color: #ffe8ae;">
+<!-- <body style="background-color: #ffe8ae;"> -->
+
+<body style="background-color: white;">
 	<!-- SweetAlert JS -->
 	<!-- <script src="../plugins/sweetalert2.all.min.js"></script> -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->

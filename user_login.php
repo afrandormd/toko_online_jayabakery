@@ -2,25 +2,40 @@
 include 'layouts/header.php';
 ?>
 
-<div class="container" style="padding-bottom: 250px;">
-	<h2 style=" width: 100%; border-bottom: 4px solid #611319"><b>Login</b></h2>
+<!-- login form -->
+<div class="container" style="padding-bottom: 250px; max-width: 50%;">
+	<div class="panel-group">
+		<div class="panel panel-default">
+			<a data-toggle="#" data-parent="#accordion" href="#" style="color:#000;">
+				<div class="panel-heading" style="background-color: #611319;">
+					<h4 class="panel-title text-center">
+						<b style="color: white;">Login</b>
+					</h4>
+				</div>
+			</a>
+			<div id="collapseOne" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<form action="proses/login.php" method="POST">
+						<div class="form-group">
+							<label for="exampleInputEmail1">username</label>
+							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username"
+								name="username" style="width: 600px;">
+						</div>
 
-	<form action="proses/login.php" method="POST">
-		<div class="form-group">
-			<label for="exampleInputEmail1">username</label>
-			<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username" name="username"
-				style="width: 500px;">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Password</label>
+							<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password"
+								name="pass" style="width: 600px;">
+						</div>
+						<button type="submit" class="btn btn-success">Login</button>
+						<a href="register.php" class="" style="float: right;">Belum punya akun?</a>
+					</form>
+				</div>
+			</div>
 		</div>
-
-		<div class="form-group">
-			<label for="exampleInputEmail1">Password</label>
-			<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password" name="pass"
-				style="width: 500px;">
-		</div>
-		<button type="submit" class="btn btn-success">Login</button>
-		<a href="register.php" class="btn btn-primary">Register</a>
-	</form>
+	</div>
 </div>
+<!-- end login form -->
 
 
 <?php
