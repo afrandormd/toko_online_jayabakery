@@ -18,14 +18,14 @@ if (isset($_SESSION['kd_cs'])) {
 	<script src="js/bootstrap.min.js"></script>
 	<!-- SweetAlert CSS -->
 	<!-- <link href="../plugins/sweetalert2.min.css" rel="stylesheet"> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> -->
 
 </head>
 
 <body style="background-color: #ffe8ae;">
 	<!-- SweetAlert JS -->
 	<!-- <script src="../plugins/sweetalert2.all.min.js"></script> -->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
 	<div class="container-fluid">
 		<div class="row top" style="background-color: #611319;">
@@ -59,7 +59,9 @@ if (isset($_SESSION['kd_cs'])) {
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.php" style="color: #611319"><strong>Jaya Bakery</strong></a>
+				<a class="navbar-brand" href="index.php"
+					style="color: #611319; font-weight: bold; font-size: 25px;"><strong>Jaya
+						Bakery</strong></a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

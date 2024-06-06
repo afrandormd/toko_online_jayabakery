@@ -4,7 +4,7 @@ include 'layouts/header.php';
 
 
 <div class="container" style="padding-bottom: 300px;">
-	<h2 style=" width: 100%; border-bottom: 4px solid #611319"><b>Tentang Kami</b></h2>
+	<h2 style=" width: 100%; text-align: center;"><b>Tentang Kami</b></h2>
 	<p class="text-justify">Usaha ini dimulai oleh Siyono bersama istrinya pada tahun 1996. Mereka memilih untuk
 		menjalankan usaha ini karena sang
 		istri memiliki keahlian di bidang ini. Nama jaya bakery sendiri sendiri diambil diambil dari nama anak mereka.

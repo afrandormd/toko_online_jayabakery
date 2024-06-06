@@ -40,7 +40,7 @@ $cek_sor = mysqli_num_rows($sortage);
 		</thead>
 		<tbody>
 			<?php
-			$result = mysqli_query($conn, "SELECT DISTINCT invoice, kode_customer, status, kode_produk, qty, terima, tolak, cek FROM produksi GROUP BY invoice");
+			$result = mysqli_query($conn, "SELECT DISTINCT invoice, kode_customer, status, kode_produk, qty, tanggal, terima, tolak, cek FROM produksi GROUP BY invoice");
 			$no = 1;
 			while ($row = mysqli_fetch_assoc($result)) {
 				$kodep = $row['kode_produk'];
@@ -59,7 +59,7 @@ $cek_sor = mysqli_num_rows($sortage);
 							<span style="color: orange; font-weight: bold;"><?= $row['status']; ?></span>
 						<?php } ?>
 					</td>
-					<td>2020/26-01</td>
+					<td><?php echo $row['tanggal'] ?></td>
 					<td>
 						<?php if ($row['terima'] == 0 && $row['tolak'] == 0 && $row['cek'] == 1) { ?>
 							<a href="inventory.php?cek=0" class="btn btn-warning"><i

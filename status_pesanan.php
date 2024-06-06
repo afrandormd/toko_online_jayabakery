@@ -34,15 +34,19 @@ $kode_customer = $_SESSION['kd_cs'];
                 <th scope="col">Kode Customer</th>
                 <th scope="col">Status</th>
                 <th scope="col">Tanggal</th>
-                <!-- <th scope="col">Action</th> -->
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $result = mysqli_query($conn, "SELECT DISTINCT invoice, kode_customer, status, kode_produk, qty, terima, tolak, cek FROM produksi WHERE kode_customer='$kode_customer' GROUP BY invoice");
+            $result = mysqli_query($conn, "SELECT DISTINCT invoice, kode_customer, status, kode_produk, qty, tanggal, terima, tolak, cek FROM produksi WHERE kode_customer='$kode_customer' GROUP BY invoice");
             $no = 1;
             while ($row = mysqli_fetch_assoc($result)) {
                 $inv = $row['invoice'];
+
+                // Validasi apakah pesanan sudah dibayar atau belum
+                $show_button = ($row['terima'] != 1 && $row['tolak'] != 1);
+
                 ?>
                 <tr>
                     <td><?= $no; ?></td>
@@ -58,10 +62,14 @@ $kode_customer = $_SESSION['kd_cs'];
                             <span style="color: orange; font-weight: bold;"><?= $row['status']; ?></span>
                         <?php } ?>
                     </td>
-                    <td>2020/26-01</td>
+                    <td><?= $row['tanggal'] ?></td>
                     <td>
-                        <!-- <a href="admin/detailorder.php?inv=<?= $row['invoice']; ?>&cs=<?= $row['kode_customer']; ?>"
-                            class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i> Detail Pesanan</a> -->
+                        <!-- <a href="" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i> Detail Pesanan</a> -->
+                        <!-- Menampilkan tombol Cek Pembayaran hanya pada data yang belum dibayar -->
+                        <?php if ($show_button) { ?>
+                            <a href="checkout-process.php?kd_cs=<?= $row['kode_customer']; ?>" class="btn btn-success"><i
+                                    class="glyphicon glyphicon-eye-open"></i> Cek Pembayaran</a>
+                        <?php } ?>
                     </td>
                 </tr>
                 <?php
@@ -72,6 +80,6 @@ $kode_customer = $_SESSION['kd_cs'];
     </table>
 </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <?php include 'layouts/footer.php'; ?>

@@ -8,14 +8,14 @@ include 'layouts/header.php';
 	}
 </style>
 <div class="container">
-	<h2 style=" width: 100%; border-bottom: 4px solid #611319; color: #611319;"><b>Manual Aplikasi</b></h2>
+	<h2 style=" width: 100%; color: #611319; text-align: center;"><b>Manual Aplikasi</b></h2>
 	<div class="bs-acc">
 		<div class="panel-group" id="accordion">
 			<div class="panel panel-default">
 				<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="color:#000;">
 					<div class="panel-heading" style="background-color: #eee;">
 						<h4 class="panel-title">
-							Bagaimana Cara Berbelanja di <b>Jaya Bakery</b>?
+							Bagaimana Cara Berbelanja di website <b>Jaya Bakery</b>?
 						</h4>
 					</div>
 				</a>
@@ -25,6 +25,9 @@ include 'layouts/header.php';
 							<li>Pastikan Anda sudah Daftar/Register dahulu</li>
 							<li>Pilih Produk yang ingin dibeli</li>
 							<li>Lakukan Checkout pesanan anda</li>
+							<li>Lakukan pembayaran pesanan anda</li>
+							<li>Cek menu <b>Status Pesanan</b> untuk melihat pesanan anda, tunggu hingga admin melakukan
+								konfirmasi pesanan anda.</li>
 						</ol>
 					</div>
 				</div>

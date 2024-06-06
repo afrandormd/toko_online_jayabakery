@@ -1,7 +1,9 @@
 <?php
 namespace Midtrans;
 
-require_once dirname(__FILE__) . '/../../Midtrans.php';
+include 'layouts/header.php';
+
+require_once dirname(__FILE__) . '/midtrans/Midtrans.php';
 // Set Your server key
 Config::$serverKey = 'SB-Mid-server-57mkIhwT9i3YXjlyulVOMWpQ';
 Config::$clientKey = 'SB-Mid-client-Hk_Q8z24XlP4dKnI';
@@ -23,7 +25,7 @@ Config::$is3ds = true;
 // Config::$overrideNotifUrl = "https://example.com";
 
 // Koneksi ke database
-include "../../../koneksi/koneksi.php";
+include "koneksi/koneksi.php";
 $kd_cs = $_GET['kd_cs'];
 
 // Ambil data transaksi dari database
@@ -146,6 +148,9 @@ function printExampleWarningMessage()
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h2 class="text-center">Checkout Berhasil!</h2>
+                <h5 class="bg-success" style="padding: 7px; width: 100%; font-weight: bold;">
+                    <marquee>Harap jangan meninggalkan halaman ini sebelum melakukan pembayaran!</marquee>
+                </h5>
                 <button id="pay-button" class="btn btn-lg btn-block"
                     style="background-color: #611319; color: white;">Bayar Sekarang</button>
                 <!-- <div id="result-json" class="result-item">
@@ -181,3 +186,5 @@ function printExampleWarningMessage()
 </body>
 
 </html>
+<br>
+<?php include 'layouts/footer.php'; ?>

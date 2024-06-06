@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_assoc($keranjang)) {
 $del_keranjang = mysqli_query($conn, "DELETE FROM keranjang WHERE kode_customer = '$kd_cs'");
 
 if ($del_keranjang) {
-	header("location:../midtrans/examples/snap/checkout-process.php?kd_cs=$kd_cs");
+	header("location:../checkout-process.php?kd_cs=$kd_cs");
 	// header("location:../selesai.php");
 }
 
