@@ -52,15 +52,15 @@ $result = mysqli_query($conn, $sql);
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Cari produk..." name="search">
 					<span class="input-group-btn">
-						<button class="btn btn-default" type="submit"><i
-								class="glyphicon glyphicon-search"></i></button>
+						<button class="btn" type="submit" style="background-color: #dcc68b;"><i
+								class="glyphicon glyphicon-search" style="color: #611319;"></i></button>
 					</span>
 				</div>
 			</form>
 		</div>
 	</div>
 
-	<div class="row">
+	<div class=" row">
 		<?php
 		while ($row = mysqli_fetch_assoc($result)) {
 			?>

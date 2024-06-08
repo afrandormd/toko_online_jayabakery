@@ -120,7 +120,7 @@ if (isset($_POST['submit1'])) {
 
 		} else {
 			echo "<tr>
-					<td colspan='7' class='text-center bg-danger'><h5><b>SILAHKAN LOGIN TERLEBIH DAHULU SEBELUM BERBELANJA</b></h5></td>
+					<td colspan='7' class='text-center bg-danger' style='background-color: #611319;'><h5><b>SILAHKAN LOGIN TERLEBIH DAHULU SEBELUM BERBELANJA</b></h5></td>
 					</tr>";
 		}
 		?>

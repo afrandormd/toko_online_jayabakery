@@ -4,7 +4,7 @@ include 'layouts/header.php';
 
 <!-- login form -->
 <div class="container" style="padding-bottom: 250px; max-width: 50%;">
-	<div class="panel-group">
+	<div class="panel-group" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 		<div class="panel panel-default">
 			<a data-toggle="#" data-parent="#accordion" href="#" style="color:#000;">
 				<div class="panel-heading" style="background-color: #611319;">
@@ -19,13 +19,13 @@ include 'layouts/header.php';
 						<div class="form-group">
 							<label for="exampleInputEmail1">username</label>
 							<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Username"
-								name="username" style="width: 600px;">
+								name="username" style="width: 670px;">
 						</div>
 
 						<div class="form-group">
 							<label for="exampleInputEmail1">Password</label>
 							<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password"
-								name="pass" style="width: 600px;">
+								name="pass" style="width: 670px;">
 						</div>
 						<button type="submit" class="btn btn-success">Login</button>
 						<a href="register.php" class="" style="float: right;">Belum punya akun?</a>

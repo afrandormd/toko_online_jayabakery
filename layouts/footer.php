@@ -11,9 +11,9 @@
 			<div class="col-md-3">
 				<h3><b>Menu</b></h3>
 				<div class="menu-footer"">
-					<p><a href="" style=" color: white">Produk</a></p>
-					<p><a href="" style="color: white">Tentang kami</a></p>
-					<p><a href="" style="color: white">Hubungi Kami</a></p>
+					<p><a href=" produk.php" style=" color: white">Produk</a></p>
+					<p><a href="about.php" style="color: white">Tentang kami</a></p>
+					<p><a href="about.php" style="color: white">Hubungi Kami</a></p>
 				</div>
 			</div>
 

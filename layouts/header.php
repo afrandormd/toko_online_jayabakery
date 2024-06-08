@@ -50,9 +50,8 @@ if (isset($_SESSION['kd_cs'])) {
 	</div>
 
 	<!-- <nav class="navbar navbar-default" style="padding: 5px; background-color: #611319;"> -->
-	<nav class="navbar navbar-default" style="padding: 5px; background-color: #dcc68b;">
+	<nav class="navbar" style="padding: 5px; background-color: #dcc68b; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 		<div class="container">
-
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
 					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -68,11 +67,11 @@ if (isset($_SESSION['kd_cs'])) {
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.php">Home</a></li>
-					<li><a href="produk.php">Produk</a></li>
-					<li><a href="manual.php">Manual Aplikasi</a></li>
-					<li><a href="status_pesanan.php">Status Pesanan</a></li>
-					<li><a href="about.php">Tentang Kami</a></li>
+					<li><a href="index.php" style="color: #611319;">Home</a></li>
+					<li><a href="produk.php" style="color: #611319;">Produk</a></li>
+					<li><a href="manual.php" style="color: #611319;">Manual Aplikasi</a></li>
+					<li><a href="status_pesanan.php" style="color: #611319;">Status Pesanan</a></li>
+					<li><a href="about.php" style="color: #611319;">Tentang Kami</a></li>
 					<?php
 					if (isset($_SESSION['kd_cs'])) {
 						$kode_cs = $_SESSION['kd_cs'];
@@ -80,13 +79,14 @@ if (isset($_SESSION['kd_cs'])) {
 						$value = mysqli_num_rows($cek);
 
 						?>
-						<li><a href="keranjang.php"><i class="glyphicon glyphicon-shopping-cart"></i> <b>[ <?= $value ?>
+						<li><a href="keranjang.php" style="color: #611319;"><i class="glyphicon glyphicon-shopping-cart"
+									style="color: #611319;"></i> <b>[ <?= $value ?>
 									]</b></a></li>
 
 						<?php
 					} else {
 						echo "
-						<li><a href='keranjang.php'><i class='glyphicon glyphicon-shopping-cart'></i> [0]</a></li>
+						<li><a href='keranjang.php' style='color: #611319;'><i class='glyphicon glyphicon-shopping-cart'></i> [0]</a></li>
 
 						";
 					}
@@ -95,9 +95,9 @@ if (isset($_SESSION['kd_cs'])) {
 
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								aria-expanded="false"><i class="glyphicon glyphicon-user"></i> Akun <span
-									class="caret"></span></a>
-							<ul class="dropdown-menu">
+								aria-expanded="false"><i class="glyphicon glyphicon-user" style="color: #611319;"></i> Akun
+								<span class="caret"></span></a>
+							<ul class="dropdown-menu" style="color: #611319">
 								<li><a href="user_login.php">login</a></li>
 								<li><a href="register.php">Register</a></li>
 							</ul>

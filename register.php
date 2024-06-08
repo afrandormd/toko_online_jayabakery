@@ -3,7 +3,7 @@ include 'layouts/header.php';
 ?>
 <!-- login form -->
 <div class="container" style="padding-bottom: 250px; max-width: 50%;">
-	<div class="panel-group">
+	<div class="panel-group" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 		<div class="panel panel-default">
 			<a data-toggle="#" data-parent="#accordion" href="#" style="color:#000;">
 				<div class="panel-heading" style="background-color: #611319;">
