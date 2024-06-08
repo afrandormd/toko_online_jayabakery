@@ -18,7 +18,7 @@ if (isset($_SESSION['kd_cs'])) {
 	<script src="js/bootstrap.min.js"></script>
 	<!-- SweetAlert CSS -->
 	<!-- <link href="../plugins/sweetalert2.min.css" rel="stylesheet"> -->
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
 </head>
 
@@ -27,7 +27,7 @@ if (isset($_SESSION['kd_cs'])) {
 <body style="background-color: white;">
 	<!-- SweetAlert JS -->
 	<!-- <script src="../plugins/sweetalert2.all.min.js"></script> -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 	<div class="container-fluid">
 		<div class="row top" style="background-color: #611319;">

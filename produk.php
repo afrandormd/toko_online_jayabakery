@@ -1,8 +1,6 @@
 <?php
 include 'layouts/header.php';
 
-// Sambungan ke database dan fungsi lainnya
-
 // Tentukan kata kunci pencarian jika ada
 $search_keyword = "";
 if (isset($_GET['search'])) {

@@ -57,7 +57,7 @@ $kode_customer = $_SESSION['kd_cs'];
                         <?php if ($row['terima'] == 1) { ?>
                             <span style="color: green; font-weight: bold;">Pesanan Diterima (Siap Kirim)</span>
                         <?php } elseif ($row['tolak'] == 1) { ?>
-                            <span style="color: red; font-weight: bold;">Pesanan Ditolak</span>
+                            <span style="color: red; font-weight: bold;">Pesanan Ditolak (Gagal Dikirim)</span>
                         <?php } else { ?>
                             <span style="color: orange; font-weight: bold;"><?= $row['status']; ?></span>
                         <?php } ?>

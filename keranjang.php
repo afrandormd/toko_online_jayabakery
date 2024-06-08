@@ -10,7 +10,7 @@ if (isset($_POST['submit1'])) {
 	document.addEventListener('DOMContentLoaded', function () {
 		Swal.fire({
 			title: 'Checkout Berhasil!',
-			text: 'Terimakasih Sudah Berbelanja Jaya Bakery, Pesananmu sedang diproses silahkan tunggu barangmu dirumah ya.. :)',
+			text: 'Terimakasih Sudah Berbelanja di Jaya Bakery, Pesananmu sedang diproses silahkan tunggu barangmu dirumah ya.. :)',
 			icon: 'success',
 			confirmButtonText: 'OK'
 		});
