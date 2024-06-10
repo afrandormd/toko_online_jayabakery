@@ -34,8 +34,10 @@ if (isset($_POST['submit1'])) {
 
 
 <div class="container" style="padding-bottom: 300px;">
-	<h2 style=" width: 100%; border-bottom: 4px"><b><i class="glyphicon glyphicon-shopping-cart"></i> Keranjang</b></h2>
-	<table class="table table-striped" style="background-color: #611319; color: white;">
+	<h2 style=" width: 100%; border-bottom: 4px; color: #611319;"><b><i class="glyphicon glyphicon-shopping-cart"></i>
+			Keranjang</b></h2>
+	<table class="table table-striped"
+		style="background-color: #611319; color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 		<?php
 		if (isset($_SESSION['user'])) {
 			$kode_cs = $_SESSION['kd_cs'];

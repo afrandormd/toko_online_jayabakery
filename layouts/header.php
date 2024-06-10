@@ -19,7 +19,12 @@ if (isset($_SESSION['kd_cs'])) {
 	<!-- SweetAlert CSS -->
 	<!-- <link href="../plugins/sweetalert2.min.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-
+	<style>
+		.navbar-toggle .icon-bar {
+			background-color: #611319;
+			/* Ubah ini dengan warna yang Anda inginkan */
+		}
+	</style>
 </head>
 
 <!-- <body style="background-color: #ffe8ae;"> -->

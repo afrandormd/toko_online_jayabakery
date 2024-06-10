@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $sql);
 	<!-- FORM PENCARIAN -->
 	<div class="row">
 		<div class="col-md-8">
-			<h2 style="width: 100%;"><b>Semua Produk Kami</b></h2>
+			<h2 style="width: 100%; color: #611319;"><b>Semua Produk Kami</b></h2>
 		</div>
 		<div class="col-md-4" style="margin: 20px 0px">
 			<form action="produk.php" method="GET">
